@@ -1,10 +1,8 @@
-
-
-function MyForm() {
+export default function MyForm() {
 
   return (
-    <></>
+    <>
+      <input />
+    </>
   );
 }
-
-export default MyForm;
