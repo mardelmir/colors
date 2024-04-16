@@ -5,7 +5,6 @@
   min-width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 /* Estilos para el input */
@@ -22,7 +21,7 @@ input {
 }
 
 input:focus {
-  outline: rgb(0, 187, 224) 1.5px solid;
+  outline: #00bbe0 1.5px solid;
 }
 
 /* CSS de regalo */
@@ -51,4 +50,25 @@ input:focus {
   font-size: 18px;
   color: white;
   transition: background-color 0.3s;
+}
+
+.check {
+  color: #213547;
+}
+
+@media (max-width: 730px) {
+  .container {
+    max-width: 500px;
+    padding: 20px 5px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .container {
+    border: 1px solid #8d97a0;
+  }
+
+  .box {
+    color: #213547;
+  }
 }
