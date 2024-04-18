@@ -4,7 +4,6 @@ import BoxColor from './BoxColor';
 function MyForm() {
   const [value, setValue] = useState('')
   const inputRef = useRef(null)
-
   const colors = [
     { name: 'blue', hex: '#00A4DE' },
     { name: 'aqua', hex: '#68EBFC' },
@@ -27,7 +26,7 @@ function MyForm() {
         onChange={() => setValue(inputRef.current.value)} />
 
       <div className='container'>
-        {colors.map(color => <BoxColor key={color.name} color={color} value={value} />)}
+        {colors.map(color => <BoxColor key={color.hex} color={color} value={value} />)}
       </div>
     </>
   )
