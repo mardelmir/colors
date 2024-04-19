@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect } from 'react'
 
 function BoxColor({ color, value }) {
   const [boxClass, setBoxClass] = useState('')
@@ -7,11 +7,13 @@ function BoxColor({ color, value }) {
 
   const css = {
     borderColor: color.hex,
-    backgroundColor: boxClass !== `box ${cleanValue}` ? 'transparent' : color.hex
+    backgroundColor: boxClass.value !== `box ${cleanValue}` ? null : color.hex
   }
 
+  console.log(boxClass)
+
   useEffect(() => {
-    setBoxClass(colorRef.current.className)
+    setBoxClass(colorRef.current.classList)
   }, [])
 
   return (
